@@ -1,3 +1,14 @@
+# Ignore Terraform directories and files
+.terraform/
+*.tfstate
+*.tfstate.backup
+*.tfvars
+*.tfvars.json
+.terraform.lock.hcl
+crash.log
+.terraformrc
+terraform.rc
+.env
 # Common .gitignore for HVD Modules
 # If you need to add a rule, add it to the hvd-module-template repo
 

@@ -31,3 +31,9 @@ variable "global_admin_password" {
   type        = string
   description = "Global admin password"
 }
+
+variable "tls_insecure" { #For self-sign cert
+  type        = bool
+  description = "Skip TLS verification when connecting to Boundary"
+  default     = false
+}

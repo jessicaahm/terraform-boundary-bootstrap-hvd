@@ -12,6 +12,7 @@ terraform {
 
 provider "boundary" {
   addr             = var.boundary_endpoint
+  tls_insecure     = var.tls_insecure  #For self-sign cert. Note: Please do not set this to true in PROD
   recovery_kms_hcl = <<EOT
   kms "awskms" {
     purpose    = "recovery"

@@ -1,6 +1,15 @@
 # Boundary Bootstrap - AWS
 
+> Note: Added this line for convenient. If you would like to generate the terraform.tfvars automatically
+
+```sh
+# You can get the output from the earlier demo-boundary-controller-aws
+kms_key_id              = "$(terraform output created_kms_recovery_id)"
+boundary_endpoint       = "$(terraform output boundary_url)"
+```
+
 <!-- BEGIN_TF_DOCS -->
+
 ## Requirements
 
 | Name | Version |
@@ -22,4 +31,5 @@
 | <a name="input_global_admin_password"></a> [global\_admin\_password](#input\_global\_admin\_password) | Global admin password | `string` | n/a | yes |
 | <a name="input_kms_key_id"></a> [kms\_key\_id](#input\_kms\_key\_id) | AWS KMS key ID for recovery | `string` | n/a | yes |
 | <a name="input_kms_region"></a> [kms\_region](#input\_kms\_region) | AWS KMS region | `string` | n/a | yes |
+
 <!-- END_TF_DOCS -->
